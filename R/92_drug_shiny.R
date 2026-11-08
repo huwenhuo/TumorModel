@@ -687,8 +687,16 @@ drug_catalog_server <- function(id, study) {
         invisible(NULL)
       }
 
-      refresh_drug_choices()
-      refresh_product_choices()
+      # Populate select inputs after the module enters a reactive context.
+      shiny::observeEvent(
+        TRUE,
+        {
+          refresh_drug_choices()
+          refresh_product_choices()
+        },
+        once = TRUE,
+        ignoreInit = FALSE
+      )
 
       # =====================================================================
       # Drugs

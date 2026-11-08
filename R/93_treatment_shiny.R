@@ -1307,7 +1307,15 @@ treatment_admin_server <- function(id, study) {
       })
 
       # Populate inputs and tables when the module starts.
-      refresh_everything()
+      # Populate inputs and tables once the module has an active reactive context.
+      shiny::observeEvent(
+        TRUE,
+        {
+          refresh_everything()
+        },
+        once = TRUE,
+        ignoreInit = FALSE
+      )
 
       invisible(NULL)
     }
