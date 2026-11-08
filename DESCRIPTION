@@ -1,0 +1,28 @@
+Package: TumorModel
+Title: Tools for Tumor Model Study Data Management
+Version: 0.1.0
+Authors@R: 
+    person(
+      given = "Wenhuo",
+      family = "Hu",
+      role = c("aut", "cre"),
+      email = "huwenhuo@gmail.com"
+    )
+Description: Tools for managing tumor model studies, including animal
+    enrollment, tumors, measurements, treatment groups, treatment
+    assignments, drug catalog records, and dose administration records.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+Imports:
+    DBI,
+    R6,
+    RSQLite,
+    shiny,
+    DT,
+    rhandsontable
+Suggests:
+    devtools,
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+Config/roxygen2/version: 8.1.0

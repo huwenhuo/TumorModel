@@ -1,0 +1,51 @@
+# R session and workspace files
+.Rhistory
+.RData
+.Ruserdata
+
+# RStudio
+.Rproj.user/
+
+# Package build/check artifacts
+*.tar.gz
+*.Rcheck/
+*.Rcheck
+src/*.o
+src/*.so
+src/*.dll
+
+# Development/build output
+doc/
+Meta/
+
+# Jupyter
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/
+
+# Backups and temporary files
+Rbak/
+*~
+*.bak
+*.swp
+
+# Database files: do not commit study databases
+*.sqlite
+*.sqlite3
+*.db
+
+# Study data / exports: do not commit real data
+data-raw/
+private/
+output/
+exports/
+*.csv
+*.xlsx
+*.xls
+
+# Secrets/configuration
+.env
+.env.*
+*.key
+*.pem
+credentials*
+config-local.*
